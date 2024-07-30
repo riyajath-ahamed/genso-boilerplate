@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const cliProgress = require('cli-progress');
 const gradient = require('gradient-string');
+const { select, confirm  } = require('@inquirer/prompts');
 
 
 async function cmdCommand(command) {
@@ -54,15 +55,59 @@ try {
 
       process.chdir(projectPath);
 
-      console.log('Installing dependencies...');
-      cmdCommand('npm install');
+      const answer = await select({
+        message: "🧪 Select a package manager",
+        choices: [
+          {
+            name: "Npm",
+            value: "npm",
+          },
+          {
+            name: "Yarn",
+            value: "yarn",
+          },
+        ],
+      });
+      console.log('Installing dependencies...⌛');
+      cmdCommand(`${answer} install`);
 
-      console.log('Removing useless files');
+      console.log();
+      const answerTailwind = await confirm({ message: 'Would you like to install Tailwind CSS?' });
+      if (answerTailwind) {
+        if (answer === "npm") {
+            console.log("Installing Tailwind CSS 🌀...");
+          cmdCommand('npm install tailwindcss');
+        } else if (answer === "yarn") {
+            console.log("Installing Tailwind CSS 🌀...");
+        cmdCommand('yarn add tailwindcss');
+        }
+      }
+
+
+      console.log('Removing useless files🧹...');
       cmdCommand('npx rimraf ./.git');
       fs.rmdirSync(path.join(projectPath, 'bin'), { recursive: true});
 
-      console.log(gradient.morning('The installation is done, this is ready to use !'))
+      console.log(gradient.cristal('The installation is done,✅'))
+      console.log(gradient.morning('This is ready to use!⚡🎉'))
       console.log();
+      
+      console.log("If you have any issues, please report them at: ", isuuereport);
+
+      console.log();
+
+      console.log("\x1b[33m", "You can start by typing:");
+      console.log(`    cd ${projectPath}`);
+
+      if (answer === "npm") {
+        console.log("    npm start", "\x1b[33m");
+    } else if (answer === "yarn") {
+        console.log("    yarn start", "\x1b[33m");
+    }
+      console.log();
+      console.log("Check README.md for more information");
+      console.log();
+
 
     } catch (error) {
       console.log(error);
