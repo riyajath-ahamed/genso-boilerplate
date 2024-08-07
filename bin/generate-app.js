@@ -189,7 +189,7 @@ async function main() {
             ],
         });
 
-        const installTailwind = await confirm({ message: '🌀 Would you like to install Tailwind CSS?' });
+        //const installTailwind = await confirm({ message: '🌀 Would you like to install Tailwind CSS?' });
 
         buildPackageJson(projectPath, projectName);
 
@@ -197,10 +197,10 @@ async function main() {
         console.log("");
         await execCommand(`${packageManager} install`);
 
-        if (installTailwind) {
+        // if (installTailwind) {
             console.log("Installing Tailwind CSS 🌀...");
             await execCommand(`${packageManager} ${packageManager === 'npm' ? 'install' : 'add'} tailwindcss`);
-        }
+        //}
 
         cleanUpProject(projectPath, packageManager);
 
