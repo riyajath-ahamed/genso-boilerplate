@@ -1,24 +1,17 @@
+import React from 'react'
+import { Banner, Footer, Header, NavBar } from './components'
 
-import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header h-1 p-4 flex">
-        <p className='text-'>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" font-inter tracking-tight text-gray-900 ">
+      <div className='flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip'>
+        <NavBar />
+        <Header />
+        <Banner />
+        <Footer />
+      </div>
     </div>
   );
 }
 
-export default App;
+export default App
