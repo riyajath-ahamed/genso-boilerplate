@@ -1,6 +1,6 @@
 {
   "name": "genso-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple ReactJS Boilerplate with some Genso Magic ;)",
   "main": "index.js",
   "repository": "https://github.com/riyajath-ahamed/genso-boilerplate",
