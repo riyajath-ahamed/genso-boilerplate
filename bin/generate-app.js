@@ -105,7 +105,7 @@ function buildPackageJson(projectPath, projectName) {
             notistack: "^2.0.4",
             react: "^18.1.0",
             "react-dom": "^18.1.0",
-            "react-router-dom": "^5.2.0",
+            "react-router-dom": "6.26.0",
             "react-scripts": "5.0.1",
             sweetalert2: "^11.4.13",
             "web-vitals": "^2.1.4",
