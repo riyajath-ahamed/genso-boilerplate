@@ -13,9 +13,15 @@
     A simple ReactJS Boilerplate with some Genso Magic ;)
     <br />
     <br />
+    <a href="https://github.com/riyajath-ahamed/genso-boilerplate">
     <img alt="Static Badge" src="https://img.shields.io/badge/view-repo?style=flat&logoColor=violet&label=View%20Repo&labelColor=blue&link=https%3A%2F%2Fgithub.com%2Friyajath-ahamed%2Fgenso-boilerplate">
+    </a>
+    <a href="https://github.com/riyajath-ahamed/genso-boilerplate/issues">
     <img alt="Static Badge" src="https://img.shields.io/badge/report-bug?style=flat&label=Report%20Bug&link=https%3A%2F%2Fgithub.com%2Friyajath-ahamed%2Fgenso-boilerplate%2Fissues">
+    </a>
+    <a href="https://www.npmjs.com/package/genso-boilerplate">
     <img alt="Static Badge" src="https://img.shields.io/badge/link-npm?style=flat&label=NPM&color=FF0000&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fgenso-boilerplate">
+    </a>
   </p>
 </p>
 
