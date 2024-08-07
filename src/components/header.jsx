@@ -41,7 +41,9 @@ const Header = () => {
                 </span>
                 <br />
                 <span className="animate-[code-6_10s_infinite]">
-                  Package published.
+                The installation is done✅
+                <br />
+                This is ready to use!⚡🎉
                 </span>
               </div>
             </div>
